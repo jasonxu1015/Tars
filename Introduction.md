@@ -1,20 +1,22 @@
-# 目录
-> * [1.介绍] (#main-chapter-1)
-> * [2.设计思路]  (#main-chapter-2)
-> * [3.整体架构] (#main-chapter-3)
-> * [4.平台特性] (#main-chapter-4)
+[Click me switch to English version](Introduction.en.md)
 
-# 1. 介绍 <a id="main-chapter-1"></a>
+# 目录
+> * [1.介绍](#main-chapter-1)
+> * [2.设计思路](#main-chapter-2)
+> * [3.整体架构](#main-chapter-3)
+> * [4.平台特性](#main-chapter-4)
+
+# 1. <a id="main-chapter-1"></a>介绍
 
 Tars是基于名字服务使用Tars协议的高性能RPC开发框架，同时配套一体化的服务治理平台，帮助个人或者企业快速的以微服务的方式构建自己稳定可靠的分布式应用。
 
-Tars是将腾讯内部使用的微服务架构TAF（Total Application Framework）多年的实践成果总结而成的开源项目。Tars这个名字来自星际穿越电影人机器人Tars，
+Tars是将腾讯内部使用的微服务架构TAF（Total Application Framework）多年的实践成果总结而成的开源项目。Tars这个名字来自《星际穿越》电影中机器人Tars，
 电影中Tars有着非常友好的交互方式，任何初次接触它的人都可以轻松的和它进行交流，同时能在外太空、外星等复杂地形上，超预期的高效率的完成托付的所有任务。
 拥有着类似设计理念的Tars也是一个兼顾易用性、高性能、服务治理的框架，目的是让开发更简单，聚焦业务逻辑，让运营更高效，一切尽在掌握。
 
 目前该框架在腾讯内部，有100多个业务、1.6多万台服务器上运行使用。
 
-# 2. 设计思想 <a id="main-chapter-2"></a>
+# 2. <a id="main-chapter-2"></a>设计思想
 
 Tars的设计思路是采用微服务的思想对服务进行治理，同时对整个系统的各个模块进行抽象分层，将各个层次之间相互解耦或者松耦合，如下图：
 
@@ -26,7 +28,7 @@ Tars的设计思路是采用微服务的思想对服务进行治理，同时对�
 
 最上面的运营层，设计思路是让运维只需要关注日常的服务部署、发布、配置、监控、调度管理等操作。
 
-# 3. 整体架构 <a id="main-chapter-3"></a>
+# 3. <a id="main-chapter-3"></a>整体架构
 ## 3.1. 架构拓扑图
 
 ![tars](docs/images/tars_tuopu.png)
@@ -60,7 +62,7 @@ Stat（调用统计）：统计业务服务上报的各种调用信息，比如�
 
 Property（业务属性）：统计业务自定义上报的属性信息，比如内存使用大小、队列大小、cache命中率等，以便对服务出现异常时进行告警；
 
-Notify（异常信息）：统计业务上报的各种异常信息，比如服务状态变跟信息、访问db失败信息等，以便对服务出现异常时进行告警；
+Notify（异常信息）：统计业务上报的各种异常信息，比如服务状态变更信息、访问db失败信息等，以便对服务出现异常时进行告警；
 
 原则上要求全部的节点之间网络互通，至少每台机器的node能够与公共框架节点之间都是可以连通的。
 
@@ -101,13 +103,13 @@ web管理系统主要包含以下功能：
 
 NetThread：    收发包，连接管理，多线程(可配置），采用epoll ET触发实现，支持tcp/udp；
 
-BindAdapter：  绑定端口类，用于管理servent对应的绑定端口的信息操作；
+BindAdapter：  绑定端口类，用于管理Servant对应的绑定端口的信息操作；
 
 ServantHandle：业务线程类，根据对象名分派Servant的对象和接口调用；
 
 AdminServant： 管理端口的对象；
 
-ServantImp：   继承Servant的业务处理基类（Servent：服务端接口对象的基类）；
+ServantImp：   继承Servant的业务处理基类（Servant：服务端接口对象的基类）；
 
 客户端：
 
@@ -123,9 +125,9 @@ AsyncThread：  异步请求的回应包处理线程；
 
 Callback：     具体业务Callback的处理基类对象；
 
-# 4. 平台特性 <a id="main-chapter-4"></a>
+# 4. <a id="main-chapter-4"></a>平台特性
 ## 4.1. tars协议
-tars协议采用接口描述语言（Interface description language，缩写IDL）来实现，它是一种二进制、可扩展、代码自动生成、支持多平台的协议，使得在不同平台上运行的对象和用不同语言编写的程序可以用PRC远程调用的方式相互通信交流，
+tars协议采用接口描述语言（Interface description language，缩写IDL）来实现，它是一种二进制、可扩展、代码自动生成、支持多平台的协议，使得在不同平台上运行的对象和用不同语言编写的程序可以用RPC远程调用的方式相互通信交流，
 主要应用在后台服务之间的网络传输协议，以及对象的序列化和反序列化等方面。
 
 协议支持的类型分两种，基本类型和复杂类型。
@@ -182,18 +184,18 @@ Client主动屏蔽：
 
 
 ## 4.7. IDC分组
-为了加快服务间的访问速度，建设跨地区、跨机房调用带来的网络资源消耗，减少网络故障带来的影响，框架提供了跨地区、跨机房，就近接入的功能。
+为了加快服务间的访问速度，减少跨地区、跨机房调用带来的网络资源消耗，减少网络故障带来的影响，框架提供了跨地区、跨机房，就近接入的功能。
 
 ![tars](docs/images/tars_idc.png)
 
-详细介绍参见docs目录下的tars_idc_set.md
+详细介绍参见docs目录下的[tars_idc_set.md](docs/tars_idc_set.md#1-idc分组逻辑介绍-)
 
 ## 4.8. SET分组
 为了方便对业务服务部署管理进行标准化和容量化，框架提供了Set部署能力，set之间没有调用关系，互不干扰，故障隔离，提高运维效率和服务可用性。
 
 ![tars](docs/images/tars_set.png)
 
-详细介绍参见docs目录下的tars_idc_set.md
+详细介绍参见docs目录下的[tars_idc_set.md](docs/tars_idc_set.md#2-set分组逻辑介绍-)
 
 ## 4.9. 数据监控
 为了更好反映和监控小到服务进程、大到业务的运行质量情况，框架支持以下数据上报的功能:
@@ -202,7 +204,7 @@ Client主动屏蔽：
 
 ![tars](docs/images/tars_stat.png)
 
-2.提供了用户自定义属性数据上报的功能，方便用户查看服务的某些纬度或者指标，比如内存使用情况、队列大小、cache命中率等；
+2.提供了用户自定义属性数据上报的功能，方便用户查看服务的某些维度或者指标，比如内存使用情况、队列大小、cache命中率等；
 
 ![tars](docs/images/tars_property.png)
 
@@ -223,5 +225,4 @@ Set配置是具体一个Set分组下所有服务的公共配置，在应用配�
 
 节点配置是一个应用节点的个性化配置，它和服务配置合并成为具体一个服务节点的配置。
 
-详细介绍可以参见docs目录下的tars_config.md
-
+详细介绍可以参见docs目录下的[tars_config.md](https://github.com/TarsCloud/TarsFramework/blob/master/docs/tars_config.md)

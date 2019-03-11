@@ -1,19 +1,10 @@
-¸Ã¹¤³ÌÊÇTars¿ò¼ÜÎÄµµÏà¹Ø½éÉÜ
+è¯¥å·¥ç¨‹æ˜¯Tarsæ¡†æ¶æ–‡æ¡£ç›¸å…³ä»‹ç»ï¼Œå…¶ä»–åŠŸèƒ½æ–‡æ¡£è¯·åˆ°å„ä¸ªè¯­è¨€ï¼Œå¦‚cppã€javaã€nodejsç­‰ç›®å½•ä¸‹çš„docsæŸ¥çœ‹
 
-Ãû³Æ |¹¦ÄÜ
+åç§° |åŠŸèƒ½
 ------------------|----------------
-tars_tup.md                 |Tars¿ò¼ÜµÄÍ³Ò»Í¨ĞÅĞ­ÒéËµÃ÷ÎÄµµ
-tars_performce.md           |Tars¿ò¼ÜĞÔÄÜ²âÊÔËµÃ÷ÎÄµµ
-tars_template.md            |Tars¿ò¼ÜÄ£°æÅäÖÃÎÄ¼şËµÃ÷ÎÄµµ
-tars_config.md              |Tars¿ò¼ÜÒµÎñÅäÖÃÎÄ¼şËµÃ÷ÎÄµµ
-tars_server_monitor         |Tars¿ò¼Ü·şÎñ¼à¿ØËµÃ÷ÎÄµµ
-tars_idc_set.md             |Tars¿ò¼ÜIDC·Ö×éºÍSet·Ö×éËµÃ÷ÎÄµµ
-tars_cpp_server_thread.md   |Tars C++¿ò¼ÜµÄ·şÎñÏß³ÌËµÃ÷ÎÄµµ
-tars_cpp_quickstart.md      |Tars C++¿ò¼Ü¿ìËÙÈëÃÅ
-tars_cpp_develop_specification.md      |Tars C++¿ª·¢¹æ·¶
-tars_cpp_user_guide.md      |Tars C++ÓÃ»§Ö¸ÄÏ
-tars_cpp_faq.md             |Tars C++ FAQ
-tars_cpp_http_demo.md       |Tars C++ Http·şÎñÊ¾Àı
-tars_java_quickstart.md     |Tars Java¿ìËÙÈëÃÅ
-tars_java_user_guide.md     |Tars JavaÓÃ»§Ö¸ÄÏ
-tars_java_faq.md            |Tars Java FAQ
+[tars_http.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_http.md)                |Tarsæ¡†æ¶æ”¯æŒhttp2åè®®åŠŸèƒ½è¯´æ˜
+[tars_idc_set.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_idc_set.md)             |Tarsæ¡†æ¶IDCåˆ†ç»„å’ŒSetåˆ†ç»„è¯´æ˜æ–‡æ¡£
+[tars_openssl.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_openssl.md)             |Tarsæ¡†æ¶æ”¯æŒhttpsåè®®åŠŸèƒ½è¯´æ˜
+[tars_performce.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_performce.md)           |Tarsæ¡†æ¶æ€§èƒ½æµ‹è¯•è¯´æ˜æ–‡æ¡£
+[tars_tracing.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_tracing.md)             |Tarsæ¡†æ¶è°ƒç”¨é“¾ä½¿ç”¨è¯´æ˜
+[tars_auth.md](https://github.com/TarsCloud/Tars/blob/master/docs/tars_auth.md)                |Tarsé‰´æƒåŠŸèƒ½
